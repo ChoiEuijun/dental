@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0020)https://threejs.org/ -->
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>3d practice example</title>
+
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+		<link rel="shortcut icon" href="https://threejs.org/files/favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="main.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<script src="colors.js"></script>
+
+	</head>
+
+
+	<body class="home">
+
+			<div id="panel">
+
+				<div id="header">
+					<h1><a href=""><div>CEJ's</div></a><a id="version" href="">v1.0</a></h1>
+
+					<div id="sections">
+						<a href="https://threejs.org/docs/index.html#manual/introduction/Creating-a-scene">docs</a>
+						<a href="https://threejs.org/examples/#webgl_animation_cloth">examples</a>
+					</div>
+
+					<div id="expandButton"></div>
+				</div>
+
+				<div id="panelScrim"></div>
+
+					<div id="contentWrapper">
+
+						<div id="content">
+
+							<h2>Clinical case</h2>
+               <!-- 좌측 리스트 -->
+							<ul id="nav"></ul>
+
+						</div>
+					</div>
+			</div>
+
+			<div><iframe id="viewer" name="viewer" scrolling="auto" src="welcome.html"></iframe>
+			</div>
+				
+
+        <script>
+
+        fetch('list').then(function(response){
+          response.text().then(function(text){
+            var items = text.split(',');
+            var i = 0;
+            var tags = '';
+            while(i<items.length){
+              var item = items[i];
+              item = item.trim();
+              var tag = '<li><a href="'+item+'.html"  target="viewer" >'+item+'</a></li>';
+              tags = tags + tag;
+              i = i + 1;
+            }
+            document.querySelector('#nav').innerHTML = tags;
+          })
+        });
+        </script>
+
+
+</body></html>
