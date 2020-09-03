@@ -1,55 +1,71 @@
 <!DOCTYPE html>
 <!-- saved from url=(0020)https://threejs.org/ -->
-<html lang="en">
+<html lang="ko">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-		<title>3d practice example</title>
+		<title>CEJ's</title>
+
+		<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
-		<link rel="shortcut icon" href="https://threejs.org/files/favicon.ico">
-
-		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="files/main.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-		<script src="colors.js"></script>
 
 	</head>
 
 
 	<body class="home">
 
+		
 			<div id="panel">
 
 				<div id="header">
-					<h1><a href=""><div>CEJ's</div></a><a id="version" href="">v1.0</a></h1>
-
-					<div id="sections">
-						<a href="https://threejs.org/docs/index.html#manual/introduction/Creating-a-scene">docs</a>
-						<a href="https://threejs.org/examples/#webgl_animation_cloth">examples</a>
-					</div>
-
-					<div id="expandButton"></div>
+					<h1><a href=""><div>CEJ's v1.0</h1>
+					<div id="expandButton" ></div>		
 				</div>
 
 				<div id="panelScrim"></div>
 
-					<div id="contentWrapper">
+				<div id="contentWrapper">
 
-						<div id="content">
+					<div id="content">
 
 							<h2>Clinical case</h2>
-               <!-- 좌측 리스트 -->
+
+            				<!-- 좌측 리스트 -->
 							<ul id="nav"></ul>
 
-						</div>
 					</div>
+				</div>	
 			</div>
 
-			<div><iframe id="viewer" name="viewer" scrolling="auto" src="welcome.html"></iframe>
-			</div>
+			<script>
+				var panel = document.getElementById( 'panel' );
+				var expandButton = document.getElementById( 'expandButton' );
+				var panelScrim = document.getElementById( 'panelScrim' );
+		
+				expandButton.addEventListener( 'click', function ( event ) {
+		
+					panel.classList.toggle( 'open' );
+					event.preventDefault();
+		
+				} );
+		
+				panelScrim.onclick = function ( event ) {
+		
+					event.preventDefault();
+					panel.classList.toggle( 'open' );
+		
+				};
+		
+			</script>
+				
+			<!-- viewer -->
+			<iframe id="viewer" name="viewer" scrolling="auto" src="welcome.html"></iframe>
+			
 				
 
         <script>
