@@ -1,0 +1,14 @@
+img {
+  height: 100%; width:100%;
+  max-width:50%;
+}
+
+p {
+
+  font-size: 1.3rem;
+
+}
+
+body {
+  text-align: center;
+}
