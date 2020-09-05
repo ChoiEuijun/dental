@@ -3,12 +3,18 @@ img {
   max-width:50%;
 }
 
-p {
+/* p {
 
   font-size: 1.3rem;
 
-}
+} */
+
+
 
 body {
+	font-family: 'Roboto Mono', monospace;
+	margin: 0px;
+	color: var(--text-color);
+  background-color: var(--background-color);
   text-align: center;
 }
