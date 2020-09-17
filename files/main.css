@@ -70,6 +70,7 @@ body {
 	margin: 0px;
 	color: var(--text-color);
 	background-color: var(--background-color);
+	
 }
 
 a {
@@ -377,7 +378,7 @@ h1 a {
 #viewer,
 iframe {
 	position: absolute;
-	border: 1px solid red;
+	border: 0px solid red;
 	left: 0;
 	right: 0;
 	width: 100vw;
@@ -579,8 +580,31 @@ iframe {
 	}
 }
 
+/* 추가 */
+
 img {
 	height: 100%; width:100%;
 	display: inline-block;
-	max-width:50%;
-  }
+	max-width:750px;
+ }
+
+#columns{
+	column-width: 100%;
+	column-gap: 15px;
+ }
+#columns figure{
+	display: inline-block;
+	/* border:1px solid rgba(0,0,0,0.2); */
+	margin:0;
+	margin-bottom: 15px;
+	padding:10px;
+	/* box-shadow: 2px 2px 5px rgba(0,0,0,0.5); */
+ }
+#columns figure img{
+	width:100%;
+ }
+#columns figure figcaption{
+	border-top:1px solid rgba(0,0,0,0.2);
+	padding:10px;
+	margin-top:11px;
+ }
