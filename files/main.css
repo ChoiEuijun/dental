@@ -61,8 +61,7 @@ html, body {
 }
 
 html {
-	font-size: 15px
-	/* calc(var(--font-size) - 1px); */
+	font-size: calc(var(--font-size) - 1px);
 	line-height: calc(var(--line-height) - 1px);
 }
 
